@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      .box {
+        background-color: yellowgreen;
+        border: 1px solid blueviolet;
+        min-height: 150px;
+        font-size: 2rem;
+      }
+	  #navbarNavAltMarkup>.navbar-nav>. {
+		background: red;
+		color: white;
+	  }
+	  .banner-image {
+		background-image: url('./Assets/hero-bg.jpg');
+		background-size: cover;
+	  }
+    </style>
+    <title>Bootstrap navbar</title>
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+	  <div class="container">
+        <a class="navbar-brand" href="#">BK WEBDEV</a>
+        <button 
+			class="navbar-toggler" 
+			type="button" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#navbarNavAltMarkup" 
+			aria-controls="navbarNavAltMarkup" 
+			aria-expanded="false" 
+			aria-label="Toggle navigation"
+		>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class='mx-auto'></div>
+		  <div class="navbar-nav">
+            <a class="nav-link white-text" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" class="white-text">Contact me</a>
+          </div>
+        </div>
+      </div>
+	</nav>
+	
+	<!-- Banner image -->
+	<div class='banner-image w-100 vh-100 d-flex justify-content-center align-items-center'>
+		<div class='content text-center'>
+			<h1 class='text-white'>BK WEBDEV</h1>
+		</div>
+	</div>
+	
+	<!-- Main content area -->
+	<div class='container my-5 d-grid gap-5'>
+		<div class='p-5 border'>
+			<p>
+				Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+			</p>
+		</div>
+		<div class='p-5 border'>
+			<p>
+				Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+			</p>
+		</div>
+		<div class='p-5 border'>
+			<p>
+				Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+			</p>
+		</div>
+		<div class='p-5 border'>
+			<p>
+				Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+			</p>
+		</div>
+	</div>
+	
+	
+	<script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+	  const nav = document.querySelector("nav");
+	  var links = document.querySelectorAll('.nav-link')
+	  
+	  window.addEventListener('scroll', function(){
+		if(window.pageYOffset > 50){
+			nav.classList.remove('navbar-dark');
+			nav.classList.add('bg-light', 'shadow', "navbar-light");
+			links.forEach(v => {
+			  v.classList.add('white-text')
+			});
+		} else {
+			nav.classList.add('navbar-dark');
+			nav.classList.remove('bg-light', 'shadow', 'navbar-light');
+		}
+	  });
+	  
+	</script>
+</body>

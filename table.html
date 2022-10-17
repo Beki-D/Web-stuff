@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      .box {
+        background-color: yellowgreen;
+        border: 1px solid blueviolet;
+        min-height: 150px;
+        font-size: 2rem;
+      }
+    </style>
+    <title>Bootstrap table</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link disabled">Disabled</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class=".col-sm-5 col-md-6">
+          <div class="card col-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-5">
+          <div class="input-group mb-3 col-4">
+            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+            <input class="form-control" id="username" name="username" placeholder="Username" value="">
+          </div>
+          <div class="input-group mb-3 col-4">
+            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+            <input class="form-control" id="password" name="password" placeholder="Password" value="">
+            <span class="input-group-text">
+              <i class="fa fa-eye" id="togglePassword"
+             style="cursor: pointer"></i>
+             </span>
+          </div>        
+        </div>
+      </div>
+    </div>
+    
+    <div class="container mt-3">
+        <h2>Table Head Colors</h2>
+        <p>You can use any of the contextual classes to only add a color to the table header:</p>
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th class="position-relative">Firstname<i class="position-absolute end-0 fa fa-sort-desc"></i></th>
+              <th>Lastname<i class="translate-middle p-2 bg-danger border border-light rounded-circle fa fa-sort-asc"></i></th>
+              <th>Email<i class="fa fa-sort-desc"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead class="table-success">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <!-- <div class="card col-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div class="input-group mb-3 col-4">
+      <span class="input-group-text"><i class="fa fa-lock"></i></span>
+      <input class="form-control" id="username" name="username" placeholder="Username" value="">
+    </div>
+    <div class="input-group mb-3 col-4">
+      <span class="input-group-text"><i class="fa fa-lock"></i></span>
+      <input class="form-control" id="password" name="password" placeholder="Password" value="">
+      <span class="input-group-text">
+        <i class="fa fa-eye" id="togglePassword"
+       style="cursor: pointer"></i>
+       </span>
+    </div> -->
+
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+	  const nav = document.querySelector("nav");
+	  
+	  window.addEventListener('scroll', function(){
+		if(window.pageYOffset > 50){
+			nav.classList.add('bg-light', 'shadow');
+		} else {
+			nav.classList.remove('bg-light', 'shadow');
+		}
+	  });
+		
+      togglePassword.addEventListener("click", function () {
+        
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye icon
+        this.classList.toggle('fa-eye');
+        this.classList.toggle('fa-eye-slash');
+		
+      });
+    </script>
+</body>
+</html>
