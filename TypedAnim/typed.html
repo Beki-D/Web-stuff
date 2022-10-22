@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./typed-styles.css">
+    <style>
+		body {
+		  margin: 0px;
+		}
+
+	</style>
+	<title>Type effect animations</title>
+</head>
+<body>
+	<div class="container">
+		<h1>I'm <span class="auto-type"></span></h1> 
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<!-- <script src="./typed-js.js"></script> -->
+	<script>
+		var typed = new Typed(".auto-type", {
+			strings: ['a Coder', 'an Engineer', 'a Designer', 'a developer', 'a student'],
+			typeSpeed: 10,
+			backSpeed: 150,
+			loop: true
+		});
+	</script>
+</body>
+</html>
